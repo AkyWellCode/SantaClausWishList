@@ -1,0 +1,46 @@
+.centerNoBorder {
+  text-align: center;
+}
+
+input[type=addWish] {
+  width: 170px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://img.icons8.com/sf-regular/30/000000/add.png');
+  background-position: 7px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=addWish]:focus {
+  width: 25%;
+}
+
+.space {
+  margin-top: 10px;
+}
+
+.limitText {
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+input[type=searchWish] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://img.icons8.com/ios-filled/24/000000/search--v1.png');
+  background-position: 10px 15px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=searchWish]:focus {
+  width: 25%;
+}
