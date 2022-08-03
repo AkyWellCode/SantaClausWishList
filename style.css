@@ -15,6 +15,7 @@ input[type=addWish] {
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
 }
+
 input[type=addWish]:focus {
   width: 25%;
 }
@@ -41,6 +42,40 @@ input[type=searchWish] {
   padding: 12px 20px 12px 40px;
   transition: width 0.4s ease-in-out;
 }
+
 input[type=searchWish]:focus {
   width: 25%;
+}
+
+.font {
+  font-family: Helvetica, sans-serif;
+}
+
+.checkBoxAnswear {
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.spaceAfterWishCheck {
+  margin-top: 10px;
+}
+
+.imageSpace {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* IMAGE */
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.multiLine {
+  position: absolute;
+  top: 35%;
+  left: 43.5%;
+  white-space: pre-wrap;
+  color: black;
 }

@@ -10,11 +10,11 @@
   </head>
   <body>
     <div class="centerNoBorder"> <!-- Everything must be centered -->
-      <div> <!-- Title text -->
-        <h1><p style="color:red">Santa Claus's Wish List</p></h1>
+      <div class="font"> <!-- Title text -->
+        <h1><p class="space" style="color:red">Santa Claus's Wish List</p></h1>
       </div>
       <div class="limitText"> <!-- Rules Text -->
-        <h3><p style="color:green">Rules: You are in a mall, in front of Santa Claus. He is asking what do you want for Christmas. He is also telling you that this year you were a kind person and he allows you to have 5 wishes. In the box below, Santa Claus tells you to enter your wishes (enter at least 5 wishes). Be carefull! If you enter more than 5 wishes, Santa Claus will think that you are a selfish person and it will not be guarenteed that he will add your wishes in his list!</h3>
+        <h3><p style="color:green">Rules: You are in a mall, in front of Santa Claus. He is asking what do you want for Christmas. He is also telling you that this year you were a kind person and he allows you to have 3 wishes. In the box below, Santa Claus tells you to enter your wishes (enter at least 3 wishes). Be carefull! If you enter more than 5 wishes, Santa Claus will think that you are a selfish person and it will not be guarenteed that he will add your wishes in his list!</h3>
       </div>
       <div> <!-- Text + Input box -->
         <h4><p style="color:black">Enter your wish below!</p></h4>
@@ -23,16 +23,27 @@
           <button type="button" class="btn btn-outline-secondary" onClick="return wishAdded()">Add your wish</button>
         </div>
       </div>
-      <div class="space"> <!-- Text under the "Add you wish" button + input + Search button -->
-        <h4><p style="color:red">If you want to be sure that your wish is on Santa's list, you can search it on the box below.</p></h4>
+      <div class="space"> <!-- Text under the "Add you wish" button + input + Search button + Wish Check-->
+        <h4><p style="color:red">After 3 days you want to check if Santa's elves added your wish in their database. Just enter your wish in the box below and see if the elves did their job.</p></h4>
         <input type="searchWish" name="search" id="searchWish" placeholder="Search your wish...">
         <div class="space">
           <button type="button" class="btn btn-outline-secondary" onClick="return search()">Search</button>
         </div>
+        <div id="wishCheck">
+        </div>
+      </div>
+      <div class="spaceAfterWishCheck"> <!-- PhotoList Text + Show your list Button + Image -->
+        <p class= "limitText" style="color:black; font-size:25px;">Two months before Chrismas, you received an email from Santa's elves who have implemented a system where you can monitor your wish list in real time. Press the button to monitor your wish list. (you must enter at least 3 wishes)</p>
+        <div class="checkBoxAnswear">
+          <div class="space">
+            <button type="button" class="btn btn-outline-secondary" onClick="return addListImage()">Show wishlist</button>
+          </div>
+        </div>
+        <div id="listImage">
+        </div>
       </div>
     </div>
   </body>
-
   <script type="text/javascript" src="JavaScript.js"></script>
   <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.5/dist/umd/popper.min.js" integrity="sha384-Xe+8cL9oJa6tN/veChSP7q+mnSPaj5Bcu9mPX5F5xIGE0DVittaqT5lorf0EI7Vk" crossorigin="anonymous"></script>
