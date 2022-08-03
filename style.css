@@ -2,21 +2,45 @@
   text-align: center;
 }
 
-
-.distanceTitle {
-    margin-top: 2em;
-
+input[type=addWish] {
+  width: 170px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://img.icons8.com/sf-regular/30/000000/add.png');
+  background-position: 7px 10px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=addWish]:focus {
+  width: 25%;
 }
 
-.distanceRules {
-    margin-top: 1.5em;
+.space {
+  margin-top: 10px;
 }
 
-.distanceButtons {
-    margin-top: 2.0em;
-    margin-bottom: 2.25em;
+.limitText {
+  margin-left: 10px;
+  margin-right: 10px;
 }
 
-.font {
-  font-family: Helvetica, sans-serif;
+input[type=searchWish] {
+  width: 200px;
+  box-sizing: border-box;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  font-size: 16px;
+  background-color: white;
+  background-image: url('https://img.icons8.com/ios-filled/24/000000/search--v1.png');
+  background-position: 10px 15px;
+  background-repeat: no-repeat;
+  padding: 12px 20px 12px 40px;
+  transition: width 0.4s ease-in-out;
+}
+input[type=searchWish]:focus {
+  width: 25%;
 }
