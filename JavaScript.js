@@ -1,5 +1,5 @@
-var wishNumber = 0;
-var list = new Map();
+var wishNumber = 0, list = new Map();
+
 function wishAdded() {
   var wish = $('#myWish').val();
   list.set(wishNumber, wish);
@@ -9,7 +9,7 @@ function wishAdded() {
 }
 
 function search() {
-  var wish = $('#searchWish').val(), stop = 0, id = 1;
+  var wish = $('#searchWish').val(), stop = 0;
   for (var i = 0; i < wishNumber && stop == 0; ++i) {
     var position = i, checkThisWish = list.get(position);
     if (checkThisWish == wish) {
@@ -32,7 +32,7 @@ function search() {
           <p class="font" id="+ id +" style="color:red; font-size:35px;"> Your wish is not on Santa's list! </p>
         </div>
       </div>
-      `);
+    `);
   }
   return false;
 }
@@ -45,7 +45,6 @@ function addListImage() {
        <img src="list.jpg" alt="stickyNote" style="width:70%;">
        <div class="multiLine">
         <b>Your Wishlist</b>
-
         `+ wishOne +`
         `+ wishTwo +`
         `+ wishThree +`
