@@ -1,7 +1,7 @@
-var wishNumber = 0, list = new Map();
+var wishNumber = 0, list = new Map(), addText = document.createElement("text");
 
 function wishAdded() {
-  var wish = $('#myWish').val();
+  var wish = document.getElementById("myWish").value;
   list.set(wishNumber, wish);
   alert("You wish has been added succesfully!");
   ++wishNumber;
@@ -9,30 +9,21 @@ function wishAdded() {
 }
 
 function search() {
-  var wish = $('#searchWish').val(), stop = 0;
+  var wish = document.getElementById("searchWish").value, wishCheck = document.getElementById("wishCheck"), stop = 0;
+  wishCheck.append(addText);
   for (var i = 0; i < wishNumber && stop == 0; ++i) {
     var position = i, checkThisWish = list.get(position);
     if (checkThisWish == wish) {
-      $('#1').remove();
-      $('#wishCheck').append(`
-        <div id="1">
-          <div class="checkBoxAnswear"
-              <p class="font" id="+ id +" style="color:blue; font-size:35px;">Your wish is on Santa's list!</p>
-          </div>
-        </div>
-        `);
+      addText.innerHTML = "Your wish is on Santa's list!";
+      addText.style.color = "blue";
+      addText.style.fontSize = "30px";
       stop = 1;
     }
   }
   if (stop == 0) {
-    $('#1').remove();
-    $('#wishCheck').append(`
-      <div id="1">
-        <div class="checkBoxAnswear"
-          <p class="font" id="+ id +" style="color:red; font-size:35px;"> Your wish is not on Santa's list! </p>
-        </div>
-      </div>
-    `);
+    addText.innerHTML = "Your wish is not Santa's list!";
+    addText.style.color = "red";
+    addText.style.fontSize = "30px";
   }
   return false;
 }
